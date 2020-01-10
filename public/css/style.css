@@ -104,6 +104,13 @@ a {
     color: white;
 }
 
+.section-six {
+    background: rgb(46, 45, 45);
+    background: linear-gradient(90deg, rgba(46, 45, 45, 1) 0%, rgba(0, 0, 0, 1) 64%);
+    border-radius: 15px;
+    color: white;
+}
+
 .heavier-font {
     font-weight: 500;
 }
