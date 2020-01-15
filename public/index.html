@@ -27,10 +27,9 @@
     <div class="landing">
         <img style="padding-left: 1rem;" class="img-responsive" src="images/HVAC_Sal_White.png">
         <span style="float: right; overflow: auto;" class="hide-on-med-and-down">
-            <a class="nav-bar" href="">About</a>
-            <a class="nav-bar" href="">Calculator</a>
-            <a class="nav-bar" href="">Submit</a>
-            <a class="nav-bar" href="">Contact</a>
+            <a class="nav-bar" href="#about">About</a>
+            <a class="nav-bar" href="#calculator">Calculator</a>
+            <a class="nav-bar" href="#contact">Contact</a>
         </span>
         <div class="container">
             <div class="header-text-box center">
@@ -47,8 +46,8 @@
 
             </div>
         </div>
-
     </div>
+    <a name="about"></a>
     <div class="container body">
         <h1 class="center">
             ABOUT HVAC SALARIES
@@ -66,6 +65,7 @@
                 us.</b>
         </h5>
     </div>
+    <a name="calculator"></a>
     <div class="container body">
         <h1 class="center">
             HVAC SALARY CALCULATOR
@@ -112,7 +112,6 @@
                         <center>
                             experience
                         </center>
-
                     </span>
                 </div>
                 <div class="input-field col s12">
@@ -287,7 +286,7 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <h2>Questioning Your Title? See Below for Help.</h2>
+                <h1>QUESTIONING YOUR TITLE?</h1>
                 <ul class="collapsible">
                     <li>
                         <div class="collapsible-header">HVAC Installers</div>
@@ -358,7 +357,104 @@
         </div>
     </div>
 
+    <a name="about"></a>
+    <div class="container body">
+        <h1 class="center">
+            CONTACT
+        </h1>
+        <div class="section" id="form1">
+            <div class="container">
+                <form action="">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <!-- service choices -->
+                                <div class="input-field col s12">
+                                    <p>How can we help you?</p>
+                                    <select class="browser-default" id="service" name="service">
+                                        <option value="">Choose an option</option>
+                                        <option value="talent_acquisition">Discuss my Current Salary</option>
+                                        <option value="organizational_strategy">Help Me Identify HVAC Opportunities
+                                        </option>
+                                        <option value="assessment_succession">Nothing Specific, Just Want to Chat
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- first name -->
+                                <div class="input-field col s6">
+                                    <input id="firstname" type="text" name="firstname">
+                                    <label for="firstname" class="black-text">First Name</label>
+                                </div>
+                                <!-- last name -->
+                                <div class="input-field col s6">
+                                    <input id="lastname" type="text" name="lastname">
+                                    <label for="lastname" class="black-text">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- company -->
+                                <div class="input-field col s6">
+                                    <input id="company" type="text" name="company">
+                                    <label for="company" class="black-text">Company</label>
+                                </div>
+                                <!-- job title -->
+                                <div class="input-field col s6">
+                                    <input id="jobtitle" type="text" name="jobtitle">
+                                    <label for="jobtitle" class="black-text">Job Title</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- email -->
+                                <div class="input-field col s6">
+                                    <input id="email" type="email" name="email">
+                                    <label for="email" class="black-text">Email</label>
+                                </div>
+                                <!-- phone -->
+                                <div class="input-field col s6">
+                                    <input id="phone" type="text" name="phone">
+                                    <label for="phone" class="black-text">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- country -->
+                                <div class="input-field col s6">
+                                    <input id="country" type="text">
+                                    <label for="country" class="black-text">Country</label>
+                                </div>
+                                <!-- phone -->
+                                <div class="input-field col s6">
+                                    <input id="city" type="text">
+                                    <label for="city" class="black-text">City</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 center">
+                                    <button class="btn waves-effect waves-light" id="submitbutton" type="submit"
+                                        style="background-color: #3067b1" name="action">
+                                        Submit
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
+    <div class="section" id="hidden-div">
+        <div class="container">
+            <div class="row center">
+                <div class="col s12">
+                    <h3>Thank you for submitting your information.</h3>
+                    <h5>We'll be in contact shortly.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
