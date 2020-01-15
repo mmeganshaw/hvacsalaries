@@ -85,13 +85,10 @@
                     <center>
                         education
                     </center>
-                    <center>
-                        <h5>select your highest level of education</h5>
-                    </center>
                 </span>
                 <div class="input-field col s12">
                     <select id="education1" name="education1">
-                        <option value=""></option>
+                        <option value="" disabled selected>Highest level achieved</option>
                         <option value="1">No Degree</option>
                         <option value="1.0255">High School/Certificate</option>
                         <option value="1.001">Trade School</option>
@@ -120,7 +117,7 @@
                 </div>
                 <div class="input-field col s12">
                     <select id="experience1" name="experience1">
-                        <option value=""></option>
+                        <option value="" disabled selected>Highest level achieved</option>
                         <option value="1-2">1-2 Years</option>
                         <option value="3-5">3-5 Years</option>
                         <option value="6-8">6-8 Years</option>
@@ -144,7 +141,7 @@
                 </span>
                 <div class="input-field col s12">
                     <select id="state1" name="state1" style="color: black;">
-                        <option value="" disabled selected></option>
+                        <option value="" disabled selected>Current residence</option>
                         <option value=-1.0533>Alabama</option>
                         <option value=1.1129>Alaska</option>
                         <option value=-1.0092>Arizona</option>
@@ -213,7 +210,7 @@
                 </div>
                 <div class="input-field col s12">
                     <select id="title1" name="title1">
-                        <option value="" disabled selected></option>
+                        <option value="" disabled selected>Select the best option</option>
                         <option value="tech">HVAC Technician</option>
                         <option value="installer">HVAC Installer</option>
                     </select>
@@ -232,7 +229,7 @@
                 </div>
                 <div class="input-field col s12">
                     <select id="supervised1" name="supervised1">
-                        <option value=""></option>
+                        <option value="" disabled selected>Highest number supervised</option>
                         <option value="1">0</option>
                         <option value="1.0155">1-3 People Supervised</option>
                         <option value="1.0267">4-6 People Supervised</option>
@@ -258,7 +255,7 @@
                 </div>
                 <div class="input-field col s12">
                     <select id="systems1" name="systems1">
-                        <option value=""></option>
+                        <option value="">Choose your option</option>
                         <option value="1.15">Chillers</option>
                         <option value="-1.20">Rooftop</option>
                         <option value="1.10">Hydronics</option>
@@ -271,7 +268,21 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <a class="waves-effect waves-light btn" id="update">Update</a>
+                <!-- <a class="waves-effect waves-light btn" href="#modal1" id="update">Update</a> -->
+
+                <a id="update" href="#terms" class="btn-large black modal-trigger">Update</a>
+
+                <div class="modal" id="terms">
+                    <div class="modal-content">
+                        <h4>Resulting Salary</h4>
+                        <h4 id="finalsalary"></h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="modal-close btn black" style="color: white;">
+                            Done
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -347,11 +358,17 @@
         </div>
     </div>
 
+
+
 </body>
+
+
 
 <footer>
 
 </footer>
+
+
 
 <!-- js -->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -359,6 +376,9 @@
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
+        $('.modal').modal();
+
+
         var salary = 0;
         event.preventDefault();
         $('#update').on('click', function (event) {
@@ -372,7 +392,6 @@
 
             var salary = 0;
 
-            // assigning initial title section
 
             function onlyRun(a, b, c, d, e) {
 
@@ -483,7 +502,8 @@
 
                     convertWhole(salary);
 
-                    alert(salary);
+                    // alert(salary);
+                    $('#finalsalary').text("$" + salary);
 
                 } else {
                     alert("Please fill out all the relevant fields.");
